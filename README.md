@@ -23,6 +23,8 @@ this app is **RICH!**
 <p align="center">
   <strong>See the world-changing technology in action:</strong><br />
   <img src="screenshots/seefood.gif" alt="Animated demonstration of the NOT HOT DOG app" width="200" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="screenshots/nothotdog.gif" alt="Animated demonstration of the NOT HOT DOG app" width="200" />
 </p>
 
 ## Run locally
