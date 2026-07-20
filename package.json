@@ -1,0 +1,36 @@
+{
+  "name": "not-hot-dog",
+  "version": "1.0.0",
+  "description": "Impressive AI for identifying hotdogs and, very importantly, not-hotdogs—for FREE, because the creator is RICH!",
+  "homepage": "https://jayl-dev.github.io/nothotdog/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayl-dev/nothotdog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jayl-dev/nothotdog/issues"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "npm run build && http-server dist -p 3000 -o '/index.html?nocache=1' -c-1"
+  },
+  "dependencies": {
+    "@tensorflow-models/coco-ssd": "^2.2.3",
+    "@tensorflow/tfjs": "^4.22.0",
+    "@tensorflow/tfjs-backend-cpu": "^4.22.0",
+    "@tensorflow/tfjs-backend-webgl": "^4.22.0",
+    "lottie-web": "^5.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
+    "babel-loader": "^10.1.1",
+    "copy-webpack-plugin": "^14.0.0",
+    "http-server": "^14.1.1",
+    "webpack": "^5.108.4",
+    "webpack-cli": "^7.2.1"
+  }
+}

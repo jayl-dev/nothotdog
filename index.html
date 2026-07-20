@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+<title>NOT HOT DOG</title>
+<meta name="description" content="NOT HOT DOG uses wildly impressive AI technology to identify hotdogs—and, very importantly, not-hotdogs. Available at this very link for FREE, because the creator of this app is RICH!" />
+<meta name="theme-color" content="#1261FF" />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="icons/not-hot-dog-192.png" />
+<link rel="apple-touch-icon" href="icons/not-hot-dog-192.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="NOT HOT DOG" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ===================== CAMERA SCREEN ===================== -->
+  <section id="screen-camera" class="screen active" aria-label="Camera">
+    <video id="video" autoplay playsinline muted></video>
+    <canvas id="canvas" hidden></canvas>
+    <div class="camera-brand">
+      <div class="camera-brand-title" aria-label="NOT HOT DOG">
+        <span class="brand-not">NOT</span> <span class="brand-hotdog">HOT DOG</span>
+      </div>
+    </div>
+    <div id="capture-guide" class="capture-guide" aria-hidden="true">
+      <span id="capture-guide-label" class="capture-guide-label">Center the next big thing</span>
+      <span class="target-corner top-left"></span>
+      <span class="target-corner top-right"></span>
+      <span class="target-corner bottom-left"></span>
+      <span class="target-corner bottom-right"></span>
+    </div>
+    <div id="flash" class="flash"></div>
+
+    <div id="camera-status" class="camera-status" role="status" aria-live="polite" hidden>
+      <div class="status-card">
+        <div id="startup-spinner" class="startup-spinner" aria-hidden="true"></div>
+        <p id="camera-status-text">Initializing the intelligence layer&hellip;</p>
+        <button id="retry-camera" class="btn-secondary" hidden>Try again</button>
+      </div>
+    </div>
+
+    <div class="shutter-wrap">
+      <button id="shoot-btn" class="shoot-btn classify-btn" disabled>
+        <span class="shoot-btn-inner">DISCRUPT</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===================== EVALUATING SCREEN ===================== -->
+  <section id="screen-evaluating" class="screen" aria-label="Evaluating">
+    <div id="eval-bg" class="frozen-bg"></div>
+    <div class="scrim"></div>
+    <div class="eval-overlay">
+      <div class="spinner" aria-hidden="true">
+        <div class="spinner-ring"></div>
+        <div class="spinner-core">AI</div>
+      </div>
+      <p class="eval-text">Evaluating<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
+      <p class="eval-sub">Consulting the algorithm</p>
+    </div>
+  </section>
+
+  <!-- ===================== RESULT SCREEN ===================== -->
+  <section id="screen-result" class="screen" aria-label="Result">
+    <div id="result-bg" class="frozen-bg"></div>
+    <div class="scrim"></div>
+    <div id="result-overlay" class="result-overlay">
+      <div id="confetti-lottie" class="confetti-lottie" aria-hidden="true"></div>
+      <div id="result-card" class="result-card">
+        <div id="lottie-container" class="lottie-container" aria-hidden="true"></div>
+        <div id="hotdog-icon" class="hotdog-icon" aria-hidden="true">🌭</div>
+        <h2 id="result-text" class="result-text"></h2>
+        <p id="result-sub" class="result-sub">
+          <span id="result-line"></span>
+          <button
+            id="result-details-toggle"
+            class="result-details-toggle"
+            type="button"
+            aria-label="Show identified object and score"
+            aria-controls="result-details"
+            aria-expanded="false"
+          >[?]</button>
+          <span id="result-details" class="result-details" hidden></span>
+        </p>
+        <button id="retry-btn" class="btn-primary">Disrupt Again</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script src="bundle.js"></script>
+</body>
+</html>
