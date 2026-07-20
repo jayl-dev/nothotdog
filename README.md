@@ -5,7 +5,8 @@ importantly, not-hotdogs. It is available for **FREE**, because the creator of
 this app is **RICH!**
 
 <h2 align="center">
-  <a href="https://jayl-dev.github.io/nothotdog/"><strong><u>Live Webapp</u></strong></a>
+  <a href="https://nothotdog.pages.dev/"><strong><u>Live Webapp</u></strong></a><br />
+  (<a href="https://nothotdog.pages.dev/">https://nothotdog.pages.dev/</a>)
 </h2>
 
 <p align="center">
@@ -50,9 +51,8 @@ npm run build   # Clean production build in dist/
 npm start       # Build, serve, and open the browser
 ```
 
-Pushes to `main` are built and deployed automatically to GitHub Pages. In the
-repository settings, select **GitHub Actions** as the Pages source once; the
-workflow handles subsequent deployments.
+Build the app locally, then manually upload the generated `dist/` directory to
+Cloudflare Pages.
 
 ## Credits
 
