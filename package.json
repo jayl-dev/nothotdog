@@ -2,7 +2,7 @@
   "name": "not-hot-dog",
   "version": "1.0.0",
   "description": "Impressive AI for identifying hotdogs and, very importantly, not-hotdogs—for FREE, because the creator is RICH!",
-  "homepage": "https://jayl-dev.github.io/nothotdog/",
+  "homepage": "https://nothotdog.pages.dev/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jayl-dev/nothotdog.git"
